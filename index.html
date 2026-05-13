@@ -1,45 +1,3 @@
-cotta: #B5714A;
---dark: #1C1612;
---muted: #6B5F52;
-} *
-{ margin: 0; padding: 0; box-sizing: border-box; }
-body {
-background: var(--cream);
-color: var(--dark);
-font-family: 'Cormorant Garamond', serif;
-overflow-x: hidden;
-} /
-* HERO */
-.hero {
-min-height: 100vh;
-display: grid;
-grid-template-columns: 1fr 1fr;
-position: relative;
-overflow: hidden;
-} .
-hero-left {
-background: var(--dark);
-padding: 60px 56px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-position: relative;
-z-index: 1;
-} .
-hero-left::after {
-content: '';
-position: absolute;
-inset: 0;
-background: repeating-linear-gradient(
-0deg,
-transparent,
-transparent 39px,
-rgba(255,255,255,0.03) 39px,
-rgba(255,255,255,0.03) 40px
-);
-pointer-events: none;
-} .
-badge {font-family: 'DM Mono', monospace;
 font-size: 10px;
 letter-spacing: 0.2em;
 text-transform: uppercase;
@@ -80,8 +38,8 @@ text-transform: uppercase;
 margin-bottom: 10px;
 } .
 hero-meta-line span { color: var(--clay); }
-.hero-right {background: var(--sand);
-padding: 60px 56px;
+.hero-right {
+background: var(--sand);padding: 60px 56px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -122,8 +80,8 @@ line-height: 1.8;
 opacity: 0;
 animation: fadeUp 0.8s ease 0.7s forwards;
 } /
-* CTA */.cta-bar {
-background: var(--terracotta);
+* CTA */
+.cta-bar {background: var(--terracotta);
 padding: 20px 56px;
 display: flex;
 align-items: center;
@@ -164,8 +122,8 @@ font-size: 10px;
 letter-spacing: 0.25em;
 text-transform: uppercase;
 color: var(--clay);
-margin-bottom: 48px;display: flex;
-align-items: center;
+margin-bottom: 48px;
+display: flex;align-items: center;
 gap: 16px;
 } .
 section-label::after {
@@ -241,8 +199,8 @@ background: var(--dark);
 padding: 40px 32px;
 transition: background 0.3s ease;
 cursor: default;
-}.module-card:hover { background: #26211b; }
-.module-num {
+} .
+module-card:hover { background: #26211b; }.module-num {
 font-family: 'DM Mono', monospace;
 font-size: 10px;
 color: var(--clay);
@@ -282,8 +240,8 @@ audience-title {
 font-size: clamp(28px, 3.5vw, 46px);
 font-weight: 300;
 line-height: 1.2;
-max-width: 600px;margin-bottom: 64px;
-letter-spacing: -0.02em;
+max-width: 600px;
+margin-bottom: 64px;letter-spacing: -0.02em;
 } .
 audience-list {
 display: grid;
@@ -322,8 +280,8 @@ font-family: 'DM Mono', monospace;
 font-size: 10px;
 letter-spacing: 0.25em;
 text-transform: uppercase;
-color: var(--muted);margin-bottom: 48px;
-} .fo
+color: var(--muted);
+margin-bottom: 48px;} .fo
 rmula-words {
 display: flex;
 align-items: center;
@@ -362,8 +320,8 @@ justify-content: space-between;
 align-items: flex-end;
 gap: 32px;
 } .fo
-oter-title {font-size: 20px;
-font-weight: 300;
+oter-title {
+font-size: 20px;font-weight: 300;
 color: var(--cream);
 margin-bottom: 8px;
 } .fo
@@ -404,8 +362,8 @@ to { opacity: 1; transform: translateY(0); }
 .audience-section { padding: 72px 32px; }
 .formula-section { padding: 80px 32px; }
 footer { flex-direction: column; align-items: flex-start; padding: 48px 32px; }
-.cta-bar { flex-direction: column; align-items: flex-start; padding: 20px 32px; }} @
-media (max-width: 600px) {
+.cta-bar { flex-direction: column; align-items: flex-start; padding: 20px 32px; }
+}@media (max-width: 600px) {
 .modules-grid { grid-template-columns: 1fr; }
 .hero-left, .hero-right { padding: 48px 28px; }
 }
@@ -444,8 +402,8 @@ media (max-width: 600px) {
 <div class="cta-text">Вхідний трек освітньої траєкторії «Бачити. Думати.
 Витримувати»</div>
 <button class="cta-btn">Зареєструватись →</button>
-</div><!-- ABOUT -->
-<section class="section">
+</div>
+<!-- ABOUT --><section class="section">
 <div class="section-label">Про майстерню</div>
 <div class="about-grid">
 <div class="about-text">
@@ -490,8 +448,8 @@ media (max-width: 600px) {
 <div class="module-num">МОДУЛЬ II · 3–5</div>
 <div class="module-name">Тривога, межі, гроші і контракт</div>
 <div class="module-desc">Синдром самозванця, право на відмову, оплата як
-частина професійної рамки</div><div class="module-tag">Практика</div>
-</div>
+частина професійної рамки</div>
+<div class="module-tag">Практика</div></div>
 <div class="module-card">
 <div class="module-num">МОДУЛЬ III · 6–7</div>
 <div class="module-name">Бачити і думати як психолог</div>
@@ -509,36 +467,7 @@ media (max-width: 600px) {
 </div>
 </section>
 <!-- AUDIENCE -->
-<section class="audience-section">
-<div class="section-label">Для кого</div>
-<h2 class="audience-title">Майстерня для тих, хто входить у професію</h2>
-<div class="audience-list">
-<div class="audience-item">
-<div class="audience-icon">🎓</div>
-<div class="audience-text">Студенти психологічних спеціальностей 2–6 курсів</div>
-</div>
-<div class="audience-item">
-<div class="audience-icon">🌱</div>
-<div class="audience-text">Випускники, які готуються до першого клієнта</div>
-</div>
-<div class="audience-item">
-<div class="audience-icon">🪞</div>
-<div class="audience-text">Психологи-початківці з 0–1 роком практики</div>
-</div>
-<div class="audience-item">
-<div class="audience-icon">🧭</div>
-<div class="audience-text">Ті, хто відчуває розрив між навчанням і реальною
-практикою</div>
-</div>
-</div>
-</section>
-<!-- FORMULA -->
-<section class="formula-section">
-<div class="formula-eyebrow">Освітня траєкторія</div>
-<div class="formula-words"><span class="formula-word">Бачити</span>
-<span class="formula-dot">·</span>
-<span class="formula-word">Думати</span>
-<span class="formula-dot">·</span>
+<ss="formula-dot">·</span>
 <span class="formula-word">Витримувати</span>
 </div>
 <div class="formula-sub">Три опори молодого психолога на шляху до справжньої
